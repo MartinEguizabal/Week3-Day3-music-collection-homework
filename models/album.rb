@@ -35,11 +35,13 @@ attr_accessor :title, :genre
     artist = SqlRunner.run(sql)[0]
     # binding.pry
     return Artist.new(artist)
-   
     # nil
   end
 
-  # Show the artist any album belongs to
+  def update
+    sql = "UPDATE albums SET (title, genre) = ('#{@title}','#{@genre}') WHERE id = #{@id}"
+    SqlRunner.run(sql)
+  end
   
 
 
