@@ -39,7 +39,12 @@ attr_accessor :title, :genre
   end
 
   def update
-    sql = "UPDATE albums SET (title, genre) = ('#{@title}','#{@genre}') WHERE id = #{@id}"
+    sql = "UPDATE albums SET (title, genre) = ('#{@title}','#{@genre}') WHERE id = #{@id};"
+    SqlRunner.run(sql)
+  end
+
+  def delete
+    sql = "DELETE FROM albums WHERE id = #{@id};"
     SqlRunner.run(sql)
   end
   
