@@ -47,8 +47,16 @@ attr_accessor :title, :genre
     sql = "DELETE FROM albums WHERE id = #{@id};"
     SqlRunner.run(sql)
   end
+
+  def self.find(id)
+    sql = "SELECT * FROM albums WHERE id = #{id};"
+    SqlRunner.run(sql)
+  end
   
 
 
 
 end
+
+# go over difference between find method and delete methods
+# why is id getting an ever larger number. shouldn't the delete calls in the console get rid of this?

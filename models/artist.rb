@@ -46,6 +46,11 @@ class Artist
     SqlRunner.run(sql)
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM artists WHERE id = #{id};"
+    SqlRunner.run(sql)
+  end
+
 
 
 

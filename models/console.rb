@@ -23,10 +23,6 @@ album1.save
 
 album2.save
 
-album1.title = 'Nevermind'
-album1.update
-Album.all
-
 binding.pry
 
 nil
